@@ -91,7 +91,7 @@ const CONTRACT_ADDRESS = T3RN_ABI.at(-1).CA_ARBT;
             const gasLimit = await provider.estimateGas({
               to: CONTRACT_ADDRESS,
               data: request,
-              value: parseUnits('0.01', 'ether'),
+              value: parseUnits('0.1', 'ether'),
               gasPrice,
             });
 
