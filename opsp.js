@@ -86,7 +86,7 @@ const CONTRACT_ADDRESS = T3RN_ABI.at(-1).CA_OPSP;
               options
             );
 
-            const gasPrice = parseUnits('0.1', 'gwei');
+            const gasPrice = parseUnits('0.01', 'gwei');
 
             const gasLimit = await provider.estimateGas({
               to: CONTRACT_ADDRESS,
@@ -101,7 +101,7 @@ const CONTRACT_ADDRESS = T3RN_ABI.at(-1).CA_OPSP;
               gasLimit,
               gasPrice,
               from: wallet.address,
-              value: parseUnits('0.01', 'ether'), // adjustable
+              value: parseUnits('0.1', 'ether'), // adjustable
             };
 
             const result = await wallet.sendTransaction(transaction);
